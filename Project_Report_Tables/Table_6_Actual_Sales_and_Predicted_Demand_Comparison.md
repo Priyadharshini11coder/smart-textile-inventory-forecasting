@@ -1,0 +1,30 @@
+# Table 6: Actual Sales and Predicted Demand Comparison with Inventory Replenishment Decision
+
+| Product ID | Product Name | Brand | Forecast Horizon | Recent Actual Sales (30 Days) | Predicted Demand (30 Days) | Current Stock Quantity | Replenishment Action |
+| :--- | :--- | --- | --- | --- | --- | --- | --- |
+| RPK-SHR-01 | RPK Classic Sky Blue Cotton Shirt | RPK | Next 30 Days | 29 pcs | 143 pcs | 45 pcs | Order +127 pcs |
+| RPK-SHR-02 | RPK Pure White Twill Formal Shirt | RPK | Next 30 Days | 56 pcs | 146 pcs | 50 pcs | Order +111 pcs |
+| RPK-SHR-03 | RPK Soft Pastel Pink Casual Shirt | RPK | Next 30 Days | 46 pcs | 201 pcs | 30 pcs | Order +192 pcs |
+| RPK-SHR-04 | RPK Earth Brown Daily Wear Shirt | RPK | Next 30 Days | 42 pcs | 138 pcs | 25 pcs | Order +127 pcs |
+| RPK-SHR-05 | RPK Classic Navy-Red Checked Shirt | RPK | Next 30 Days | 34 pcs | 182 pcs | 35 pcs | Order +166 pcs |
+| RPK-SET-01 | RPK Copper Zari Dhoti & Shirt Set | RPK | Next 30 Days | 12 pcs | 53 pcs | 25 pcs | Order +34 pcs |
+| RPK-SET-02 | RPK Silver Border Dhoti & Silk Shirt Set | RPK | Next 30 Days | 28 pcs | 66 pcs | 20 pcs | Order +53 pcs |
+| RPK-SET-03 | RPK Pink Copper Festive Dhoti & Shirt Set | RPK | Next 30 Days | 31 pcs | 52 pcs | 18 pcs | Order +45 pcs |
+| RPK-SET-04 | RPK Gold Copper Traditional Dhoti & Shirt Set | RPK | Next 30 Days | 42 pcs | 84 pcs | 22 pcs | Order +79 pcs |
+| RPK-DHT-01 | RPK Traditional Gold Zari Cotton Dhoti (8 Mulam) | RPK | Next 30 Days | 25 pcs | 67 pcs | 50 pcs | Order +24 pcs |
+| RPK-DHT-02 | RPK Pure White Temple Cotton Dhoti (4 Mulam) | RPK | Next 30 Days | 83 pcs | 69 pcs | 60 pcs | Order +23 pcs |
+| RPK-DHT-03 | RPK Silver Zari Wedding Silk-Cotton Dhoti | RPK | Next 30 Days | 50 pcs | 105 pcs | 30 pcs | Order +86 pcs |
+| BG-SHR-01 | Balaji Royal Executive Cotton Formal Shirt | Balaji Garments | Next 30 Days | 62 pcs | 67 pcs | 35 pcs | Order +46 pcs |
+| BG-SHR-02 | Balaji Crisp Charcoal Premium Twill Shirt | Balaji Garments | Next 30 Days | 49 pcs | 107 pcs | 28 pcs | Order +90 pcs |
+| BG-SHR-03 | Balaji Solid Pastel Blue Premium Shirt | Balaji Garments | Next 30 Days | 29 pcs | 98 pcs | 32 pcs | Order +76 pcs |
+| BG-SHR-04 | Balaji Pure White Luxury Satin-Finish Shirt | Balaji Garments | Next 30 Days | 110 pcs | 115 pcs | 40 pcs | Order +98 pcs |
+| BG-SHR-05 | Balaji Micro-Grid Checked Premium Shirt | Balaji Garments | Next 30 Days | 7 pcs | 133 pcs | 20 pcs | Order +140 pcs |
+| BG-SHR-06 | Balaji Oxford Weave Casual Premium Shirt | Balaji Garments | Next 30 Days | 7 pcs | 34 pcs | 25 pcs | Order +16 pcs |
+| CRV-BRA-01 | Carvel Girls Daily Comfort Cotton Bra | Carvel | Next 30 Days | 133 pcs | 277 pcs | 60 pcs | Order +273 pcs |
+| CRV-BRA-02 | Carvel Seamless Everyday Support Bra | Carvel | Next 30 Days | 101 pcs | 156 pcs | 45 pcs | Order +143 pcs |
+| CRV-CHM-01 | Carvel Pure Cotton Full Slip Chemise | Carvel | Next 30 Days | 139 pcs | 425 pcs | 50 pcs | Order +460 pcs |
+| CRV-CHM-02 | Carvel Spaghetti Strap Cotton Chemise | Carvel | Next 30 Days | 86 pcs | 152 pcs | 35 pcs | Order +133 pcs |
+| CRV-CAM-01 | Carvel Boys 100% Combed Cotton Ribbed Camisole / Vest | Carvel | Next 30 Days | 143 pcs | 185 pcs | 80 pcs | Order +124 pcs |
+| CRV-CAM-02 | Carvel Classic Soft Undershirt Camisole | Carvel | Next 30 Days | 37 pcs | 155 pcs | 70 pcs | Order +101 pcs |
+| CRV-SNG-01 | Carvel Boys Breathable Athletic Singlet | Carvel | Next 30 Days | 109 pcs | 209 pcs | 40 pcs | Order +201 pcs |
+| CRV-SNG-02 | Carvel Active Fit Cotton Gym Singlet | Carvel | Next 30 Days | 92 pcs | 169 pcs | 35 pcs | Order +151 pcs |

@@ -1,0 +1,19 @@
+{
+  "name": "jp-agencies-textile-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Smart Textile Inventory Management & Demand Forecasting System (JP Agencies)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "multer": "^1.4.5-lts.1"
+  }
+}

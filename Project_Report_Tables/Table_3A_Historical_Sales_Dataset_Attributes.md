@@ -1,0 +1,15 @@
+# Table 3A: Historical Sales Dataset Attributes and Data Dictionary
+
+| Attribute Name | Data Type | Description | Example Value |
+| :--- | :--- | --- | --- |
+| Sale Date | String (YYYY-MM-DD) | Date of retail transaction occurrence | 2025-01-01 |
+| Product Code | String (Categorical) | Unique stock keeping unit identifier | RPK-SHR-01 |
+| Product Name | String | Commercial textile product title | RPK Classic Sky Blue Cotton Shirt |
+| Brand | String (Categorical) | Manufacturing brand (RPK, Balaji Garments, Carvel) | RPK |
+| Category | String (Categorical) | Apparel segment (Shirts, Dhoti Sets, Innerwear) | Shirts |
+| Size | String | Garment size specification or roll dimension | 38, 40, 42, 44 |
+| Color | String | Color shade or fabric weave pattern | Sky Blue |
+| Quantity Sold | Integer | Number of units purchased by the retailer | 22 |
+| Selling Price | Integer (INR) | Wholesale billing price per unit | 240 |
+| Total Amount | Integer (INR) | Gross transaction value (Quantity x Price) | 5280 |
+| Retail Shop | String | Retail customer shop name and city destination | Senthil Garments, Erode |

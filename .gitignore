@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Production builds
+dist/
+*/dist/
+build/
+*/build/
+
+# Python compiled files & environments
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Logs & runtime data
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# OS specific files
+.DS_Store
+Thumbs.db
+desktop.ini

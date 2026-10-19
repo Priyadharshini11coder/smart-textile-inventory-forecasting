@@ -1,0 +1,26 @@
+[
+  {
+    "id": "BRD-001",
+    "name": "RPK",
+    "code": "RPK",
+    "contact": "+91 94432 10101",
+    "description": "Men's everyday shirts, traditional dhoti-and-shirt festive sets, and pure cotton dhotis.",
+    "status": "Active"
+  },
+  {
+    "id": "BRD-002",
+    "name": "Balaji Garments",
+    "code": "BG",
+    "contact": "+91 98421 20202",
+    "description": "Premium-quality executive, formal, casual, plain, and checked shirts (\u20b9450 - \u20b9550).",
+    "status": "Active"
+  },
+  {
+    "id": "BRD-003",
+    "name": "Carvel",
+    "code": "CRV",
+    "contact": "+91 97500 30303",
+    "description": "Specialized innerwear for girls (bras, chemises) and boys (camisoles, singlets).",
+    "status": "Active"
+  }
+]
