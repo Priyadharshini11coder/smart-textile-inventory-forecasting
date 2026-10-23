@@ -19,7 +19,8 @@ import {
   SlidersHorizontal,
   ChevronRight,
   Sparkles,
-  Layers
+  Layers,
+  ShoppingBag
 } from 'lucide-react';
 import {
   getProducts,
@@ -52,6 +53,7 @@ export default function ProductCatalog({ setActiveTab }) {
   const [editingProduct, setEditingProduct] = useState(null);
   const [detailsModalProduct, setDetailsModalProduct] = useState(null);
   const [stockModalProduct, setStockModalProduct] = useState(null);
+  const [sampleOrderProduct, setSampleOrderProduct] = useState(null);
   const [quickStockQty, setQuickStockQty] = useState(10);
   const [quickStockType, setQuickStockType] = useState('ADD');
   const [quickStockReason, setQuickStockReason] = useState('Stock replenishment');
@@ -603,42 +605,55 @@ export default function ProductCatalog({ setActiveTab }) {
                   </div>
                 </div>
 
-                {/* Card Footer: Price & Stock Action */}
-                <div className="p-4 border-t border-slate-100 bg-slate-50/60 flex items-center justify-between">
-                  <div>
-                    <div className="text-xl font-black text-slate-900">₹{p.price}</div>
-                    <div className="text-[11px] text-slate-500">
-                      Available Stock: <strong className="text-slate-900">{p.currentStock}</strong> pcs
+                {/* Card Footer: Price, Actions & Order Now Button */}
+                <div className="p-4 border-t border-slate-100 bg-slate-50/60 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-xl font-black text-slate-900">₹{p.price}</div>
+                      <div className="text-[11px] text-slate-500">
+                        Available Stock: <strong className="text-slate-900">{p.currentStock}</strong> pcs
+                      </div>
+                    </div>
+
+                    <div className="flex items-center space-x-1">
+                      <button
+                        onClick={() => {
+                          setStockModalProduct(p);
+                          setQuickStockQty(10);
+                          setQuickStockType('ADD');
+                        }}
+                        className="p-2 text-slate-600 hover:text-textile-teal hover:bg-white rounded-lg transition"
+                        title="Quick Stock Update"
+                      >
+                        <Boxes className="w-4 h-4" />
+                      </button>
+                      <button
+                        onClick={() => handleOpenEdit(p)}
+                        className="p-2 text-slate-600 hover:text-sky-600 hover:bg-white rounded-lg transition"
+                        title="Edit Product & Image"
+                      >
+                        <Edit2 className="w-4 h-4" />
+                      </button>
+                      <button
+                        onClick={() => handleDelete(p)}
+                        className="p-2 text-slate-400 hover:text-red-600 hover:bg-white rounded-lg transition"
+                        title="Delete Product"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-1">
-                    <button
-                      onClick={() => {
-                        setStockModalProduct(p);
-                        setQuickStockQty(10);
-                        setQuickStockType('ADD');
-                      }}
-                      className="p-2 text-slate-600 hover:text-textile-teal hover:bg-white rounded-lg transition"
-                      title="Quick Stock Update"
-                    >
-                      <Boxes className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={() => handleOpenEdit(p)}
-                      className="p-2 text-slate-600 hover:text-sky-600 hover:bg-white rounded-lg transition"
-                      title="Edit Product & Image"
-                    >
-                      <Edit2 className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={() => handleDelete(p)}
-                      className="p-2 text-slate-400 hover:text-red-600 hover:bg-white rounded-lg transition"
-                      title="Delete Product"
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </button>
-                  </div>
+                  {/* Sample "Order Now" Button for Demonstration */}
+                  <button
+                    type="button"
+                    onClick={() => setSampleOrderProduct(p)}
+                    className="w-full py-2 px-3 bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white rounded-xl text-xs font-bold shadow-xs hover:shadow transition-all flex items-center justify-center space-x-1.5 group/btn cursor-pointer"
+                    title="Order Now (Sample UI Demonstration)"
+                  >
+                    <ShoppingBag className="w-3.5 h-3.5 transition-transform group-hover/btn:scale-110" />
+                    <span>Order Now</span>
+                  </button>
                 </div>
 
               </div>
@@ -700,6 +715,14 @@ export default function ProductCatalog({ setActiveTab }) {
                       </span>
                     </td>
                     <td className="py-3 px-4 text-right space-x-1 whitespace-nowrap">
+                      <button
+                        onClick={() => setSampleOrderProduct(p)}
+                        className="px-2.5 py-1 text-xs font-bold text-white bg-textile-teal hover:bg-teal-700 rounded-lg inline-flex items-center space-x-1 shadow-2xs mr-1"
+                        title="Order Now (Demonstration Sample)"
+                      >
+                        <ShoppingBag className="w-3 h-3" />
+                        <span>Order Now</span>
+                      </button>
                       <button
                         onClick={() => {
                           setStockModalProduct(p);
@@ -816,6 +839,20 @@ export default function ProductCatalog({ setActiveTab }) {
                     <span>Update Stock</span>
                   </button>
                 </div>
+
+                {/* Sample Order Now Action */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    const p = detailsModalProduct;
+                    setDetailsModalProduct(null);
+                    setSampleOrderProduct(p);
+                  }}
+                  className="w-full mt-2.5 py-2.5 bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white rounded-xl text-xs font-bold transition flex items-center justify-center space-x-1.5 shadow-sm"
+                >
+                  <ShoppingBag className="w-3.5 h-3.5" />
+                  <span>Order Now (Sample Demonstration)</span>
+                </button>
               </div>
             </div>
           </div>
@@ -1178,6 +1215,63 @@ export default function ProductCatalog({ setActiveTab }) {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* SAMPLE "ORDER NOW" PREVIEW MODAL (DEMONSTRATION ONLY) */}
+      {sampleOrderProduct && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative text-left">
+            <button
+              onClick={() => setSampleOrderProduct(null)}
+              className="absolute right-4 top-4 text-slate-400 hover:text-slate-600 cursor-pointer"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="flex items-center space-x-2.5 mb-3">
+              <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-textile-teal shrink-0">
+                <ShoppingBag className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-teal-100 text-teal-800">
+                  Demonstration Sample UI
+                </span>
+                <h2 className="text-base font-extrabold text-slate-900 mt-0.5">Order Now (Sample)</h2>
+              </div>
+            </div>
+
+            <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-100 text-xs space-y-1.5 mb-4">
+              <div className="font-bold text-slate-900 text-sm">{sampleOrderProduct.name}</div>
+              <div className="text-slate-500 font-mono text-[11px]">{sampleOrderProduct.code} • Brand: {sampleOrderProduct.brand}</div>
+              <div className="flex justify-between pt-1 text-slate-700">
+                <span>Wholesale Unit Price:</span>
+                <strong className="text-slate-900 font-bold">₹{sampleOrderProduct.price}</strong>
+              </div>
+              <div className="flex justify-between text-slate-700">
+                <span>Available Warehouse Stock:</span>
+                <span className="font-semibold text-slate-800">{sampleOrderProduct.currentStock} pcs</span>
+              </div>
+            </div>
+
+            <div className="p-3 bg-teal-50/70 rounded-xl border border-teal-200 text-teal-950 text-xs mb-5 space-y-1">
+              <div className="font-bold flex items-center space-x-1.5 text-textile-teal">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Future Enhancement Notice</span>
+              </div>
+              <p className="text-[11px] leading-relaxed text-teal-900">
+                This "Order Now" button is a visual sample UI element for project demonstration. In future development, it will connect directly with textile supplier APIs and automated mill purchase order workflows.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setSampleOrderProduct(null)}
+              className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition text-center cursor-pointer shadow-sm"
+            >
+              Close Sample Preview
+            </button>
           </div>
         </div>
       )}
